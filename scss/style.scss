@@ -1,0 +1,108 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+body {
+  font-family: "Space Mono";
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  header {
+    height: 5vh;
+    grid-column: span 2;
+    display: flex;
+    padding: 24px;
+    align-items: center;
+    font-family: "Inconsolata";
+    font-size: 1.5rem;
+  }
+
+  main {
+    grid-column: span 2;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+
+    .img-container,
+    .details {
+      height: 100%;
+      flex-basis: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .img-container {
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .details {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 5% 10%;
+
+      .heading {
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+
+      .text {
+        font-weight: 400;
+      }
+
+      .btn-container {
+        button {
+          min-width: 218px;
+          min-height: 68px;
+          background: #333333;
+          color: white;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 800px) {
+    main {
+      flex-direction: row;
+
+      .img-container,
+      .details {
+        height: 100%;
+        flex-basis: 50%;
+      }
+
+      .img-container {
+        img {
+          height: 80%;
+          width: 80%;
+        }
+      }
+
+      .details {
+        justify-content: center;
+
+        div {
+          margin-bottom: 10%;
+        }
+      }
+    }
+  }
+}
