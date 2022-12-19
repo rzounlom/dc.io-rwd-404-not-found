@@ -79,6 +79,25 @@ body {
     }
   }
 
+  /* Media Queries */
+  @media (min-width: 768px) {
+    main {
+      .details {
+        .heading {
+          h1 {
+            font-size: 3rem;
+          }
+        }
+      }
+
+      .text {
+        p {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
   @media (min-width: 800px) {
     main {
       flex-direction: row;
@@ -91,16 +110,29 @@ body {
 
       .img-container {
         img {
-          height: 80%;
+          height: 60%;
           width: 80%;
         }
       }
 
       .details {
         justify-content: center;
+        padding: 5%;
 
         div {
           margin-bottom: 10%;
+        }
+
+        .heading {
+          h1 {
+            font-size: 4rem;
+          }
+        }
+
+        .text {
+          p {
+            font-size: 24px;
+          }
         }
       }
     }

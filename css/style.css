@@ -15,7 +15,8 @@ body {
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); }
+  grid-template-columns: repeat(2, 1fr);
+  /* Media Queries */ }
   .container header {
     height: 5vh;
     grid-column: span 2;
@@ -54,6 +55,11 @@ body {
         background: #333333;
         color: white;
         text-transform: uppercase; }
+  @media (min-width: 768px) {
+    .container main .details .heading h1 {
+      font-size: 3rem; }
+    .container main .text p {
+      font-size: 1.5rem; } }
   @media (min-width: 800px) {
     .container main {
       flex-direction: row; }
@@ -62,9 +68,14 @@ body {
         height: 100%;
         flex-basis: 50%; }
       .container main .img-container img {
-        height: 80%;
+        height: 60%;
         width: 80%; }
       .container main .details {
-        justify-content: center; }
+        justify-content: center;
+        padding: 5%; }
         .container main .details div {
-          margin-bottom: 10%; } }
+          margin-bottom: 10%; }
+        .container main .details .heading h1 {
+          font-size: 4rem; }
+        .container main .details .text p {
+          font-size: 24px; } }
